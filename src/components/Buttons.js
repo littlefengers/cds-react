@@ -10,26 +10,3 @@ export default class Button extends React.Component
      
     }
 }
-
-export class ButtonPrimary extends React.Component
-{
-    render() {
-        return(
-            <button className="btn btn--primary">{this.props.buttonText}</button>
-        )
-     
-    }
-}
-
-
-
-export class ButtonSecondary extends React.Component
-{
-    render() {
-        return(
-            <button className="btn btn--secondary">{this.props.buttonText}</button>
-        )
-     
-    }
-}
-
