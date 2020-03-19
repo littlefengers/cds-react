@@ -1,0 +1,130 @@
+//Seems to need this to have correct padding
+.form-control{
+    padding: 6px 12px;
+}
+
+.input-field-v2 {
+  .outline {
+    position: relative;
+
+    textarea {
+      &.form-control {
+        height: 100px;
+        resize: none;
+      }
+    }
+  }
+
+  .input-outline {
+    height: 40px;
+    transition: all 0.3s;
+    outline: 0;
+    box-shadow: none;
+    border: 1px solid get-color("gray-600");
+    border-radius: 3px;
+    box-sizing: border-box;
+
+    .disabled {
+      background-color: transparent;
+    }
+
+    &:focus {
+      &:not([readonly]) {
+        border: 2px solid get-color("blue-500");
+        & ~ label {
+          color: get-color("blue-500");
+          &:not(.error) {
+            transform: translate3d(0, -95%, 0);
+            background: get-color("white");
+            padding-right: 5px;
+            padding-left: 5px;
+            margin-top: 0px;
+            font-size: 14px;
+            left: 8px;
+            z-index: 1;
+          }
+        }
+      }
+    }
+
+    & ~ label {
+      &.active {
+        &:not(.error) {
+          transform: translate3d(0, -95%, 0);
+          background: get-color("white");
+          padding-right: 5px;
+          padding-left: 5px;
+          margin-top: 0px;
+          font-size: 14px;
+          left: 8px;
+          z-index: 1;
+        }
+      }
+    }
+
+    &.valid {
+      &:focus {
+        &:not([readonly]) {
+          border: 2px solid get-color("blue-500");
+          & ~ label {
+            color: get-color("blue-500");
+          }
+        }
+      }
+      &:not([readonly]) {
+        border: 1px solid get-color("gray-900");
+        & ~ label {
+          color: get-color("gray-900");
+        }
+      }
+    }
+
+    &.error {
+      &:focus {
+        &:not([readonly]) {
+          border: 2px solid get-color("red-500");
+          & ~ label {
+            color: get-color("red-500");
+          }
+        }
+      }
+      &:not([readonly]) {
+        border: 2px solid get-color("red-500");
+      }
+      & ~ label {
+        color: get-color("red-500");
+      }
+    }
+  }
+
+  label {
+    &.label-outline {
+      font-size: 14px;
+      position: absolute;
+      margin-top: 5px;
+      top: 8.2px;
+      left: 0;
+      line-height: normal;
+      padding-left: 12.5px;
+      transition: 0.2s ease-out;
+      cursor: text;
+      color: get-color("gray-500");
+      z-index: 0;
+
+      .disabled {
+        pointer-events: none;
+      }
+    }
+
+    &.error {
+      font-size: 14px;
+      margin-bottom: 0px;
+      line-height: 12px;
+    }
+  }
+
+  .form-control {
+    font-size: 14px;
+    color: get-color("gray-900");
+  }
+}

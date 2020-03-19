@@ -1,0 +1,37 @@
+import React from "react"
+import PropTypes from "prop-types"
+import $ from "jquery";
+
+
+
+const newfield = () => {
+
+    $(".input-field-v2 .input-outline").each(function( index ) {
+        if( $(this).attr('value') !== undefined && $(this).attr('value') !== "" ){
+           $('label[for="' + $(this).attr('id') + '"]').addClass( "active" );
+        }
+    });
+    
+    $('body').on("focusout", ".input-field-v2 .input-outline", function (element) {
+       if (!element.target.value && !element.target.placeholder){
+            $("label[for='" + $(element.target).attr('id') + "']").removeClass("active");
+        } else {
+            $("label[for='" + $(element.target).attr('id') + "']").addClass("active");
+        }	 
+    });	
+}
+
+newfield();
+
+function Input(props) {
+  return (
+    <div className="form-group input-field-v2 dns-ui-field">
+      <input className="ctHidden input-outline form-control" id="item1"/>
+      <label className="label-outline form-label" for="item1">This is label text</label>
+    </div>
+  )
+}
+
+Input.propTypes = {}
+
+export default Input
