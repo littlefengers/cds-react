@@ -2,9 +2,9 @@ import React from "react"
 import PropTypes from "prop-types";
 import "./../scss/style.scss"
 
-const Button = ({ buttonVariant, children, ariaLabel }) => {
+const Button = ({ variant, children, ariaLabel }) => {
 //Children prop is what's in between the tag
-  return <button className={`btn btn--${buttonVariant}`} aria-label={ariaLabel}>{children}</button>
+  return <button className={`btn btn--${variant}`} aria-label={ariaLabel}>{children}</button>
 }
 
 export default Button
@@ -16,5 +16,5 @@ Button.propTypes = {
 
 Button.defaultProps = {
     children: "Button Text",
-    buttonVariant: "primary",
+    variant: "primary",
 }

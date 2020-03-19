@@ -10,53 +10,22 @@
     @include u-color-text("gray-900");
     @include u-margin-bottom('sm');
     @include cds-u-font-line-height("sm");
-    &-alert {
+    &--warning {
         @include u-color-bg("yellow-100");
         @include u-color-border("yellow-200");
     }
 
-    &-error {
+    &--error {
         @include u-color-bg("red-100");
         @include u-color-border("red-500");
     }
 
-    &-general {
+    &--information {
         @include u-color-bg("blue-100");
         @include u-color-border("blue-500");
     }
 
-    &-success {
-        @include u-color-bg("green-100");
-        @include u-color-border("green-500");
-    }
-}
-
-.notification-v2
-{
-    border: solid;   // Need to make a token for this
-    @include u-padding-inset("sm");
-    @include u-radius("md");
-    @include u-border-width("medium");
-    @include u-color-text("gray-900");
-    @include u-margin-bottom('sm');
-    @include cds-u-font-line-height("sm");
-
-    &-alert {
-        @include u-color-bg("yellow-100");
-        @include u-color-border("yellow-200");
-    }
-
-    &-error {
-        @include u-color-bg("red-100");
-        @include u-color-border("red-500");
-    }
-
-    &-general {
-        @include u-color-bg("blue-100");
-        @include u-color-border("blue-500");
-    }
-
-    &-success {
+    &--success {
         @include u-color-bg("green-100");
         @include u-color-border("green-500");
     }

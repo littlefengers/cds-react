@@ -1,5 +1,13 @@
 //Radius
 
+@function get-radius($variant, $attribute: null) {
+  @if ($attribute == null) {
+    @return map-get-deep($cds-tokens, "radius", #{$variant});
+  } @else {
+    @return map-get-deep($cds-tokens, "radius", #{$attribute}, #{$variant});
+  }
+}
+
 @mixin u-radius($radius) {
   border-radius: get-radius($radius);
 }
