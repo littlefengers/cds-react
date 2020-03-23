@@ -2,37 +2,11 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: 400;
-  @include cds-u-font-line-height("md");
+  @include cds-u-typeset("body-copy");
   @include u-color-text("gray-900");
 }
 
-//https://material-ui.com/api/input-label/
-// .MuiInputLabel-root {
-//   &.Mui-focused {
-//     @include u-color-text("blue-500");
-//   }
-// }
-
-
-// .MuiInput-root
-// {
-//   @include u-color-border("blue-500");
-// }
-
-
-// // .MuiOutlinedInput-root {
-// //   fieldset {
-// //     @include u-color-border("blue-500");
-// //   }
-// //   &:hover fieldset {
-// //     border-color: yellow; 
-// //   }
-// //   &.Mui-focused fieldset {
-// //     @include u-color-border("blue-500");
-// //   }
-// // }
-
-.custom-root
-{
-  background-color: black;
+a {
+  text-decoration: none;
+  @include u-color-text("text",null, "link");
 }

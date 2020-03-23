@@ -12,3 +12,5 @@ export default {
 }
 
 export const Default = () => <Input></Input>;
+
+export const Error = () => <Input invalid="true"></Input>;

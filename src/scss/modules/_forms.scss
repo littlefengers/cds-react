@@ -1,7 +1,8 @@
 //Seems to need this to have correct padding
-.form-control{
-    padding: 6px 12px;
-}
+//TODO refactor to use design tokens
+// .form-control {
+//   padding: 6px 12px;
+// }
 
 .input-field-v2 {
   .outline {
@@ -39,7 +40,7 @@
             padding-right: 5px;
             padding-left: 5px;
             margin-top: 0px;
-            font-size: 14px;
+            font-size: 12px;
             left: 8px;
             z-index: 1;
           }
@@ -55,7 +56,7 @@
           padding-right: 5px;
           padding-left: 5px;
           margin-top: 0px;
-          font-size: 14px;
+          font-size: 12px;
           left: 8px;
           z-index: 1;
         }
@@ -127,4 +128,91 @@
     font-size: 14px;
     color: get-color("gray-900");
   }
+
+  .dynamic-error {
+    padding-left: 12px;
+    font-size: 14px !important;
+    color: get-color("red-500");
+    font-weight: bold;
+  }
+}
+
+
+//Material-ui overwrites
+
+// https://material-ui.com/api/input-label/
+
+// .MuiInputLabel-root {
+//   //This seems to overrite the error state, so maybe better to use the theme
+//   &.Mui-focused {
+//     @include u-color-text("blue-500");
+//   }
+// }
+
+
+.MuiInput-root
+{
+  @include u-color-border("blue-500");
+}
+
+.MuiInputBase-root{
+  @include u-radius("md")
+}
+
+
+.MuiFormHelperText-root
+{
+  @include u-margin-left("sm");
+  &.Mui-error
+  {
+    @include cds-u-font-weight("bold");
+  }
+}
+
+// .MuiOutlinedInput-root {
+//   fieldset {
+//     @include u-color-border("blue-500");
+//   }
+//   &:hover fieldset {
+//     border-color: yellow; 
+//   }
+//   &.Mui-focused fieldset {
+//     @include u-color-border("blue-500");
+//   }
+// }
+
+.outlined__link-text
+{
+  @include u-padding-top("xsm");
+  @include u-margin-left("sm");
+  @include cds-u-typeset("t7");
+
+}
+
+
+//Dropdown
+
+.MuiSelect-icon
+{
+  width: 21px;
+  height: 12px;
+  overflow: visible;
+  @include u-color-text("blue-500");
+  right:12px; //need to update
+  // padding-right: 10px;
+}
+
+.MuiSvgIcon-root
+{
+  font-size:initial;
+}
+.MuiOutlinedInput-input 
+{
+  padding-left: 12px;
+}
+
+.MuiSelect-outlined{
+  padding: 8px 12px;
+  @include cds-u-font-line-height("md");
+  @include cds-u-font-size("5");
 }

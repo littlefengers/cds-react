@@ -4,7 +4,7 @@
   @if ($attribute == null) {
     @return map-get-deep($cds-tokens, "color", #{$variant});
   } @else {
-    @return map-get-deep($cds-tokens, "color", #{$attribute}, #{$variant});
+    @return map-get-deep($cds-tokens, "color", #{$variant}, #{$attribute});
   }
 }
 
