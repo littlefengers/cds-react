@@ -5,12 +5,12 @@ import centered from '@storybook/addon-centered/react';
 import { host } from 'storybook-host';
 import Input from './Input';
 
-export default {
-    component: Input,
-    title: 'Input',
-    decorators: [withKnobs, host({width:400})]
-}
+// export default {
+//     component: Input,
+//     title: 'Input',
+//     decorators: [withKnobs, host({width:400})]
+// }
 
-export const Default = () => <Input></Input>;
+// export const Default = () => <Input></Input>;
 
-export const Error = () => <Input invalid="true"></Input>;
+// export const Error = () => <Input invalid="true"></Input>;

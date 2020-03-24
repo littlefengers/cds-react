@@ -9,17 +9,17 @@ import Dropdown from "./Dropdown"
 export default {
   component: Dropdown,
   title: "Dropdown",
-  decorators: [withKnobs, host({ width: 400 })]
+  decorators: [withKnobs, host({ width: 400, height: 40 })]
 }
 
-export const Default = () => {
+export const Default = ({children}) => {
   return (
     <StylesProvider injectFirst>
-      <Dropdown>
+      <Dropdown label={text("Label",'default label')}>
         <option aria-label="None" value="" />
-        <option value={10}>Ten</option>
-        <option value={20}>Twenty</option>
-        <option value={30}>Thirty</option>
+        <option value={'item1'}>Item 1</option>
+        <option value={'item2'}>Item 2</option>
+        <option value={'item3'}>Item 3</option>
       </Dropdown>
     </StylesProvider>
   )

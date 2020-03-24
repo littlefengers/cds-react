@@ -9,12 +9,12 @@ import NativeSelect from "@material-ui/core/NativeSelect"
 import { sizing } from '@material-ui/system';
 
 
-const Dropdown = ({children}) => {
+const Dropdown = ({children, label}) => {
     const [state, setState] = React.useState({
         age: '',
         name: 'hai',
       });
-    
+
     const handleChange = event => {
         const name = event.target.name;
         setState({
@@ -29,15 +29,17 @@ const Dropdown = ({children}) => {
           </SvgIcon>
         );
       }
+
+      
   return (
     <StylesProvider injectFirst>
       <FormControl variant="outlined" fullWidth="true">
-        <InputLabel htmlFor="outlined-age-native-simple">Age</InputLabel>
+        <InputLabel htmlFor="outlined-age-native-simple">{label}</InputLabel>
         <Select
           native
           value={state.age}
           onChange={handleChange}
-          label="Age"
+          label={label}
           inputProps={{
             name: "age",
             id: "outlined-age-native-simple"

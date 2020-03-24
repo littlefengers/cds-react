@@ -11,7 +11,7 @@ import { host } from 'storybook-host';
 export default {
   component: TextField,
   title: "TextField",
-  decorators: [withKnobs, host({width:400})]
+  decorators: [withKnobs, host({ width: 400, height: 40 })]
 }
 
 export const Input = () => {
@@ -49,7 +49,7 @@ export const InputHelpLink = () => {
   return (
     <StylesProvider injectFirst>
       <form noValidate autoComplete="off">
-      <TextFieldHelpLink id="outlined-basic" label={text("Label","Label")} variant="outlined" size="small" helperText={text("Help Text","Error Help Text")} helpLink={text("Helper Link","Helper Link")}fullWidth="true"/>
+      <TextFieldHelpLink id="outlined-basic" label={text("Label","Label")} variant="outlined" size="small" helperText={text("Help Text","Help Text")} helpLink={text("Helper Link","Helper Link")}fullWidth="true"/>
     </form>
   </StylesProvider>
   )

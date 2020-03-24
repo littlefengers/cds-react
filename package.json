@@ -23,7 +23,7 @@
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -c .storybook -o docs",
-    "deploy-storybook": "storybook-to-ghpages"
+    "deploy-storybook": "run deploy-storybook -- --existing-output-dir=docs"
   },
   "eslintConfig": {
     "extends": "react-app"

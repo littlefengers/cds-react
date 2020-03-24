@@ -163,6 +163,7 @@
 .MuiFormHelperText-root
 {
   @include u-margin-left("sm");
+  @include cds-u-font-line-height('sm');
   &.Mui-error
   {
     @include cds-u-font-weight("bold");
@@ -186,6 +187,7 @@
   @include u-padding-top("xsm");
   @include u-margin-left("sm");
   @include cds-u-typeset("t7");
+  letter-spacing: 0.03333em; //this is not in our styles
 
 }
 
@@ -202,6 +204,12 @@
   // padding-right: 10px;
 }
 
+.MuiInputLabel-outlined
+{
+  transform: translate(12px, 12px) scale(1)
+  // transform: translate(12px, 10px) scale(1)
+}
+
 .MuiSvgIcon-root
 {
   font-size:initial;
@@ -212,7 +220,7 @@
 }
 
 .MuiSelect-outlined{
-  padding: 8px 12px;
+  padding: 10.5px 12px;
   @include cds-u-font-line-height("md");
   @include cds-u-font-size("5");
 }
