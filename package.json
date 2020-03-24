@@ -1,7 +1,6 @@
 {
   "name": "cds-react-test",
   "version": "0.1.0",
-  "private": true,
   "dependencies": {
     "@invisionapp/dsm-storybook": "0.0.128",
     "@material-ui/core": "^4.9.7",
@@ -9,6 +8,7 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.4.1",
     "@testing-library/user-event": "^7.2.1",
+    "gh-pages": "^2.2.0",
     "jquery": "^3.4.1",
     "node-sass": "^4.13.1",
     "prop-types": "^15.7.2",
@@ -24,7 +24,7 @@
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -c .storybook -o docs",
-    "deploy-storybook": "storybook-to-ghpages",
+    "deploy-storybook": "gh-pages -d docs",
     "dsm-storybook:publish": "dsm-storybook publish",
     "dsm-storybook:preview": "dsm-storybook preview"
   },
