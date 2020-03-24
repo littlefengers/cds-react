@@ -9,7 +9,7 @@ import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
 title="Button" 
 component={Button} 
 decorators={[withKnobs]}
-parameters={{layout: 'centered'}}
+in-dsm= {{id: '5e43202a384beb1a3b1262a6'}}
 />
 
 # Button
@@ -23,14 +23,17 @@ Buttons are used primarily for actions, such as “Add”, “Close”, “Cance
 </Story>
 </Preview>
 
+<h2>Props</h2>
+
 <Props of={Button} />
+
+## Variants
 
 <Preview withToolbar>
 <Story name="Primary">
   <Button variant="primary" ariaLabel="Some Aria Text">{text('Button Text','Primary Button')}</Button>
 </Story>
 </Preview>
-
 
 <Preview withToolbar>
 <Story name="PrimaryAlternate">

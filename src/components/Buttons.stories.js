@@ -8,15 +8,22 @@ import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
 export default {
     component: Button,
     title: 'Button',
-      parameters: {
-        component: Button,
-      },
+    parameters: {
+      component: Button,
+    },
     decorators: [withKnobs]
+
 }
 
 
 
 export const Primary = () => <Button variant="primary" ariaLabel="Some Aria Text">{text('Button Text','Primary Button')}</Button>;
+
+Primary.story = {
+  parameters :{
+    'in-dsm': {id: '5e43202a384beb1a3b1262a6'}
+  }
+}
 
 export const PrimaryAlternate = () => <Button variant="primary-alternate" ariaLabel="Some Aria Text">{text('Button Text','Primary Alternate')}</Button>;
 
