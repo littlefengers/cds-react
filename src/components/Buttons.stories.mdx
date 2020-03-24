@@ -1,0 +1,52 @@
+import { action } from '@storybook/addon-actions';
+import { withKnobs, text, boolean, number } from '@storybook/addon-knobs/react';
+import centered from '@storybook/addon-centered/react';
+import Button from './Buttons';
+import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
+
+
+<Meta 
+title="Button" 
+component={Button} 
+decorators={[withKnobs]}
+parameters={{layout: 'centered'}}
+/>
+
+# Button
+
+Buttons are used primarily for actions, such as “Add”, “Close”, “Cancel”, or “Save”. Plain buttons, which look similar to links, are used for less important or less commonly used actions, such as “view shipping settings”.
+
+
+<Preview withToolbar>
+<Story name="Example">
+  <Button variant="primary" ariaLabel="Some Aria Text">Button text</Button>
+</Story>
+</Preview>
+
+<Props of={Button} />
+
+<Preview withToolbar>
+<Story name="Primary">
+  <Button variant="primary" ariaLabel="Some Aria Text">{text('Button Text','Primary Button')}</Button>
+</Story>
+</Preview>
+
+
+<Preview withToolbar>
+<Story name="PrimaryAlternate">
+  <Button variant="primary-alternate" ariaLabel="Some Aria Text">{text('Button Text','Primary Alternate')}</Button>
+</Story>
+</Preview>
+
+<Preview withToolbar>
+<Story name="Secondary">
+  <Button variant="secondary" ariaLabel="Some Aria Text">{text('Button Text','Secondary')}</Button>
+</Story>
+</Preview>
+
+<Preview withToolbar>
+<Story name="OutlinePrimary">
+  <Button variant="outline-primary" ariaLabel="Some Aria Text">{text('Button Text','Outline Primary')}</Button>
+</Story>
+</Preview>
+

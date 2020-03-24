@@ -7,6 +7,7 @@ import Select from "@material-ui/core/Select"
 import SvgIcon from '@material-ui/core/SvgIcon';
 import NativeSelect from "@material-ui/core/NativeSelect"
 import { sizing } from '@material-ui/system';
+import PropTypes from "prop-types";
 
 
 const Dropdown = ({children, label}) => {
@@ -53,6 +54,16 @@ const Dropdown = ({children, label}) => {
   )
 }
 
-Dropdown.propTypes = {}
+Dropdown.propTypes = {
+  label: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired
+}
 
 export default Dropdown
+
+
+
+// Dropdown.defaultProps = {
+//   children: "Button Text",
+//   variant: "primary",
+// }
