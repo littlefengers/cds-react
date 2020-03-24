@@ -7,19 +7,21 @@ import "./../scss/style.scss"
  */
 
 
-const Button = ({ variant, children, ariaLabel }) => {
+const Button = ({ variant, children, ariaLabel,url }) => {
 //Children prop is what's in between the tag
-  return <button className={`btn btn--${variant}`} aria-label={ariaLabel}>{children}</button>
+  return <button href={url} className={`btn btn--${variant}`} aria-label={ariaLabel}><a href={url}>{children}</a></button>
 }
 
 export default Button
 
 Button.propTypes = {
     ariaLabel: PropTypes.string.isRequired,
-    children: PropTypes.string.isRequired
+    children: PropTypes.string.isRequired,
+    url: PropTypes.string
 }
 
 Button.defaultProps = {
     children: "Button Text",
     variant: "primary",
+    url: "#"
 }

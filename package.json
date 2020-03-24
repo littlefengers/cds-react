@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@invisionapp/dsm-storybook": "0.0.128",
     "@material-ui/core": "^4.9.7",
     "@material-ui/styles": "^4.9.6",
     "@testing-library/jest-dom": "^4.2.4",
@@ -23,7 +24,9 @@
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -c .storybook -o docs",
-    "deploy-storybook": "run deploy-storybook -- --existing-output-dir=docs"
+    "deploy-storybook": "storybook-to-ghpages",
+    "dsm-storybook:publish": "dsm-storybook publish",
+    "dsm-storybook:preview": "dsm-storybook preview"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -46,6 +49,7 @@
     "@storybook/addon-docs": "^5.3.17",
     "@storybook/addon-knobs": "^5.3.17",
     "@storybook/addon-links": "^5.3.14",
+    "@storybook/addon-options": "^5.3.17",
     "@storybook/addon-storysource": "^5.3.17",
     "@storybook/addons": "^5.3.14",
     "@storybook/preset-create-react-app": "^1.5.2",

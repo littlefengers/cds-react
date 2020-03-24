@@ -17,6 +17,10 @@
   &:focus {
     background-color: get-deepest-token($token-map, "buttons", "color", "background", $variant, "focus");
   }
+
+  a {
+    color: get-deepest-token($token-map, "buttons", "color", "text", $variant);
+  }
 }
 
 //Button Mixins
@@ -26,7 +30,7 @@
   cursor: pointer;
   font-style:normal;
   vertical-align: middle;
-  text-decoration: none;;
+  text-decoration: none;
   height: map-get-deep($token-map, "buttons", "size","height");
   width: map-get-deep($token-map, "buttons", "size","width"); //TODO: FIX width PX
   font-size: map-get-deep($token-map,"buttons","font","size"); //TODO: need to fix deepest to work with this
