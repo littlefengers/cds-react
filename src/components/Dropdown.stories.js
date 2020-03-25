@@ -5,11 +5,16 @@ import { withKnobs, text, boolean, number } from "@storybook/addon-knobs/react"
 import { StylesProvider } from "@material-ui/styles"
 import { host } from "storybook-host"
 import Dropdown from "./Dropdown"
+import { withMuiTheme } from "@harelpls/storybook-addon-materialui";
+import costcoTheme from "./CostcoTheme.js"
 
 export default {
   component: Dropdown,
   title: "Dropdown",
-  decorators: [withKnobs, host({ width: 400, height: 40 })]
+  decorators: [withKnobs, host({ width: 400, height: 40 }), 
+    withMuiTheme({
+    "Custom light theme": costcoTheme,
+  })]
 }
 
 export const Default = ({children}) => {

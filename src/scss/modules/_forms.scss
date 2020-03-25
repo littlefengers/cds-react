@@ -170,15 +170,16 @@
   }
 }
 
+
 // .MuiOutlinedInput-root {
-//   fieldset {
+
+//   &.Mui-focused {
 //     @include u-color-border("blue-500");
-//   }
-//   &:hover fieldset {
-//     border-color: yellow; 
-//   }
-//   &.Mui-focused fieldset {
-//     @include u-color-border("blue-500");
+    
+//     .MuiOutlinedInput-notchedOutline
+//     {
+//       @include u-color-border("blue-500");
+//     }
 //   }
 // }
 
@@ -223,4 +224,12 @@
   padding: 10.5px 12px;
   @include cds-u-font-line-height("md");
   @include cds-u-font-size("5");
+}
+
+
+//Error
+
+.Mui-error
+{
+  @include u-color-text('red-500')
 }

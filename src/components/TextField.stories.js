@@ -6,13 +6,20 @@ import TextFieldHelpLink from './TextFieldHelpLink';
 import TextFieldTooltip from './TextFieldTooltip';
 import { StylesProvider } from "@material-ui/styles";
 import { host } from 'storybook-host';
-
+import { withMuiTheme } from "@harelpls/storybook-addon-materialui";
+import costcoTheme from "./CostcoTheme.js"
 
 export default {
   component: TextField,
   title: "TextField",
-  decorators: [withKnobs, host({ width: 400, height: 40 })]
+  decorators: [withKnobs, 
+               host({ width: 400, height: 40 }),
+               withMuiTheme({
+                "Custom light theme": costcoTheme,
+              })
+              ]
 }
+
 
 export const Input = () => {
   return (
