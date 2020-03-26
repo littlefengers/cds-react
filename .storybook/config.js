@@ -1,6 +1,12 @@
 import { configure, addDecorator, addParameters } from '@storybook/react';
 import { initDsm } from '@invisionapp/dsm-storybook';
 
+configure(
+  require.context('../src', true, /\.stories\.js$/),
+  module
+)
+
+
 //Init Dsm
 initDsm({
     addDecorator,
